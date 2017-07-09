@@ -40,22 +40,33 @@ body
 	text-align: center
 .space
 	padding: 10px
-.header
-	background-color: #ccc
+.header-bg
+	width: 100%
+	height: 80vh
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
 .my-nav
 	z-index: 10
 	position: relative
 	background-color: $white2
 	min-height: 100px
 	width: 100%
-	.logo
+	&-nobg
+		background-color: transparent
+	.logo, .logo-white
 		font-family: Pacifico
 		font-size: 25px
 		letter-spacing: 2.5px
 		a
 			text-decoration: none
-			color: $black
-	.top-menu
+	.logo
+		a
+			color: $dark
+	.logo-white
+		a
+			color: $white2
+	.top-menu, .top-menu-white
 		font-family: Montserrat
 		font-weight: bold
 		letter-spacing: 2.4px
@@ -67,13 +78,33 @@ body
 		a
 			text-decoration: none
 			margin: 0 20px
-			color: $black
 			transition: all ease .2s
 			&:hover
 				color: $accent
-
-
-
+	.top-menu
+		a
+			color: $black
+	.top-menu-white
+		a
+			color: $white2
+.fix-my-nav
+	position: fixed
+	background-color: #FFF
+	min-height: 50px
+	.top-menu-white, .logo-white
+		ul
+			margin: 0
+			li
+				margin: 0
+				&:hover
+					background-color: #111
+		a
+			text-decoration: none
+			margin: 0 20px
+			transition: all ease .2s
+			color: $black
+			&:hover
+				color: $accent
 #owl-hero
 	position: relative
 	z-index: 0
